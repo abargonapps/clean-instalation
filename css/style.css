@@ -1,4 +1,4 @@
-@import url('reset.css');
+@import url('normalize.css');
 
 
 
@@ -27,16 +27,22 @@ body {
     height:100%;
 	-webkit-text-size-adjust: none; /* For iphone Landscape */
 	-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;-o-font-smoothing: antialiased;-ms-font-smoothing: antialiased; /* For font looks antialiased */
-
+    -moz-osx-font-smoothing: grayscale; /* Moz antialiased */
 }
 
 
+/*---- Clear ----*/
+.clear:after {content:"";display:block;height:0;clear:both;visibility:hidden;}
+.clear {display:inline-block;}
+.clear {display:block;}
+* html .clear {height:1px;}
+
 /*------- Transition ---------*/
-a {-webkit-transition:.4s;-moz-transition:.4s;-o-transition:.4s;-ms-transition:.4s;transition:.4s;}
+a, input, textarea, button {-webkit-transition:.4s;-moz-transition:.4s;-o-transition:.4s;-ms-transition:.4s;transition:.4s;}
 
 
 /*--- inner block ----*/
-.inner-block { }
+.inner-block {position: relative; height: auto; width: 900px;margin: 0 auto;}
 
 
 /*//////////////
@@ -52,14 +58,14 @@ a {-webkit-transition:.4s;-moz-transition:.4s;-o-transition:.4s;-ms-transition:.
    HEADER 
 
 ///////////////////*/
-header { width: 100%; color: #fff;   background: #7ac142; text-align: center; overflow: hidden;}
+header { width: 100%;}
 
 /*//////////////
 
    CONTENT
 
 ///////////////////*/
-#content{ height:auto;width:100%;  z-index: 3; position: relative; /* background: #fff; */}
+#content{ height:auto;width:100%; }
 
 
 
@@ -77,6 +83,6 @@ header { width: 100%; color: #fff;   background: #7ac142; text-align: center; ov
   FOOTER
 
 ///////////////////*/
-footer {width:100%;position:absolute;bottom:0;left:0; }
+footer {width:100%;position:absolute;bottom:0;left:0;}
 
 

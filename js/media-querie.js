@@ -33,11 +33,15 @@ var mediaquerie = function() {
                 if( width >= 1025 ) {
                     //---->Desktop
     
-                } else if( width >= 0 && width <= 1024 ) {
+                } else if( width >= 701 && width <= 1024 ) {
+                   //---->Tablet
+    
+    						
+                } else if( width >= 0 && width <= 700 ) {
                    //---->Mobile
     
     						
-                } 
+                }
             }
 			
         }, pause );
@@ -62,17 +66,8 @@ function isIE( version, comparison ){
 
 $(document).ready(function() {
 	if(isIE(8))	{} 
-	else {}
-});	
-
-/*:::::::::::
-
-    Ready
-    
-::::::::::*/
-
-$(document).ready(function() {
-		
-		//---------> Mediaquerie
+	else {
+        //---------> Mediaquerie
 		mediaquerie();
-});
+    }
+});	
